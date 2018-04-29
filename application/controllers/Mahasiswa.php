@@ -19,7 +19,16 @@ class Mahasiswa extends CI_Controller {
 		$data['mahasiswas'] = json_decode($this->curl->simple_get($this->API . '/mahasiswas'));
 		$this->load->view('template/header', $meta);
 		$this->load->view('v_mahasiswas', $data);
-		$this->load->view('template/footer', $data);
+		$this->load->view('template/footer');
+	}
+
+	public function getbyId($xid)
+	{
+		$meta['page_title'] = "list mahasiswa";
+		$data['mahasiswas'] = json_decode($this->curl->simple_get($this->API . '/getByIdmahasiswas/'. $xid));
+		$this->load->view('template/header', $meta);
+		$this->load->view('v_mahasiswas', $data);
+		$this->load->view('template/footer');
 	}
 
 	public function tentang()

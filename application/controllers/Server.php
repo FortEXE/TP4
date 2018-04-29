@@ -20,4 +20,11 @@ class Server extends CI_Controller {
 
 		$this->output->set_content_type('application/json')->set_output(json_encode($data));
 	}
+
+	public function getByIdmahasiswas($xid)
+	{
+		$data = $this->M_Mhs->getbyId($xid);
+
+		$this->output->set_content_type('application/json')->set_output(json_encode($data));
+	}
 }

@@ -21,7 +21,7 @@ class M_Mhs extends CI_Model {
 	public function getById($xid){
 
     	$q = $this->db->select('*')->from('mahasiswas')->where('id',$xid)->get();
-    	return $data->result();
+    	return $q->result();
     }
 
 	public function insertMhs($data){
