@@ -5,7 +5,7 @@
 </head>
 <body>
 	
-	<table>
+	<table class="table">
 		<thead>
 			<tr>
 				<th>ID</th>
@@ -13,6 +13,7 @@
 				<th>NAMA</th>
 				<th>KELAS</th>
 				<th>EMAIL</th>
+				<th>ACTION</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -25,6 +26,10 @@
 				<td><?= $var->nama; ?></td>
 				<td><?= $var->kelas; ?></td>
 				<td><?= $var->email; ?></td>
+				<td>
+					<a href="<?= site_url('mahasiswa/edit/'. $var->id) ?>" title=""><button class="btn btn-primary">Edit</button></a>
+					<a href="<?= site_url('mahasiswa/hapus/'. $var->id) ?>" title=""><button class="btn btn-primary">Hapus</button></a>
+				</td>
 			</tr>
 
 			<?php endforeach ?>

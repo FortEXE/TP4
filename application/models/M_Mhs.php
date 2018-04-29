@@ -17,6 +17,28 @@ class M_Mhs extends CI_Model {
 
 		return $q ->result();
 	}
+
+	public function getById($xid){
+
+    	$q = $this->db->select('*')->from('mahasiswas')->where('id',$xid)->get();
+    	return $data->result();
+    }
+
+	public function insertMhs($data){
+    	$q = $this->db->insert('mahasiswas', $data);
+    }
+
+    public function deleteMhs($data){
+
+    	$q = $this->db->where('id', $data['id']);
+    	$q = $this->db->delete('mahasiswas');
+    }
+
+    public function updateMhs($data){
+
+    	$q = $this->db->where('id', $data['id']);
+    	$q = $this->db->update('mahasiswas', $data);
+    }
 }
 
 /* End of file M_Mhs.php */
