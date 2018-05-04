@@ -24,7 +24,7 @@ class Mahasiswa extends CI_Controller {
 
 	public function getbyId($xid)
 	{
-		$meta['page_title'] = "list mahasiswa";
+		$meta['page_title'] = "mahasiswa " . $xid;
 		$data['mahasiswas'] = json_decode($this->curl->simple_get($this->API . '/getByIdmahasiswas/'. $xid));
 		$this->load->view('template/header', $meta);
 		$this->load->view('v_mahasiswas', $data);

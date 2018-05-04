@@ -26,18 +26,20 @@ class M_Mhs extends CI_Model {
 
 	public function insertMhs($data){
     	$q = $this->db->insert('mahasiswas', $data);
-    }
 
-    public function deleteMhs($data){
-
-    	$q = $this->db->where('id', $data['id']);
-    	$q = $this->db->delete('mahasiswas');
+        return true;
     }
 
     public function updateMhs($data){
 
+        $q = $this->db->where('id', $data['id']);
+        $q = $this->db->update('mahasiswas', $data);
+    }
+    
+    public function deleteMhs($data){
+
     	$q = $this->db->where('id', $data['id']);
-    	$q = $this->db->update('mahasiswas', $data);
+    	$q = $this->db->delete('mahasiswas');
     }
 }
 

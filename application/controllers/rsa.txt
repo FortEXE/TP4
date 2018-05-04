@@ -1,0 +1,21 @@
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/csupicom/.ssh/id_rsa.
+Your public key has been saved in /home/csupicom/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:pnfDnrA5IxSzAAwQm6PDB7/Pp0FxNDvq9PkeNDNm978 
+The key's randomart image is:
++---[RSA 2048]----+
+|=+     o         |
+| oo   . o        |
+|+. . . +         |
+|o.o . * .        |
+|o. o = +SB .     |
+| .. = +o=.= .    |
+|   . +.oo.+  .   |
+|    o oo+*.o  .  |
+|     +o.+=o    E.|
++----[SHA256]-----+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDZYjwAuXhRGque30owG7twRx0y2rX7dtMBUBvzpcywnNuvpkt36guVGGZ/QVoQYtlw6gPbhM32T/uBlYB0Ll6ZWntHYMR76dS8P7qdHeMl3MQlhkSLasPXMnObPG6G3JvNmVJFoYJUZ71Hm6ScM+ZlE5qU8p1eVc6stV3trk2y3ts1On58L9Q+A8kgdScEXFnnRsHEoR+No59VD4QHqRiXYWQmfnVO9cCWh5WFyF86tiGcQwaiE40FM9ybE6o9OKLv8NXl7D5peZ7J7+IB50pfZwELlJoJk0vH9j/7N0uhN7RJvBPoYB8vKYE4pF7WMLSvuYBkF4Kxic9brWO4Iod

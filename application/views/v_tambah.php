@@ -1,4 +1,4 @@
-<form action="<?= site_url('mahasiswa/proses_tambah') ?>" method="POST" role="form">
+<form action="<?= site_url('Server/postMahasiswa') ?>" method="POST" role="form">
   <!-- <legend>Tambah</legend> -->
 
   <div class="form-group">
