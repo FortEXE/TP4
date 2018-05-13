@@ -34,12 +34,18 @@ class M_Mhs extends CI_Model {
 
         $q = $this->db->where('id', $data['id']);
         $q = $this->db->update('mahasiswas', $data);
+
+        return true;
+
     }
     
     public function deleteMhs($data){
 
     	$q = $this->db->where('id', $data['id']);
     	$q = $this->db->delete('mahasiswas');
+
+        return true;
+        
     }
 }
 

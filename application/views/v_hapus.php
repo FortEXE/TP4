@@ -1,8 +1,9 @@
-<form action="<?= $API . '/putMahasiswa' ?>" method="POST" role="form">
+<form action="<?= $API . '/deleteMahasiswa' ?>" method="POST" role="form">
   <!-- <legend>Tambah</legend> -->
 
   <?php foreach ($mahasiswas as $val): ?>
   <div class="form-group">
+    <label for="id">id:</label>
     <input type="text" class="form-control col-sm-3" name="id" value="<?= $val->id ?>">
   </div>    
   <div class="form-group">
@@ -25,8 +26,9 @@
     <label for="password">Password:</label>
     <input type="text" class="form-control col-sm-3" name="password" value="<?= $val->password ?>">
   </div>
+  <div class="form-group">
+    <input type="submit" name="submit" value="DELETE?" class="btn btn-danger">
+  </div>
   <?php endforeach ?>
-  <button type="submit" name="submit" class="btn btn-success">Edit</button>
-  <a href="javascript:history.back()" title="">back to main</a>
-
+    <a href="javascript:history.back()" title="">back to main</a>
 </form>

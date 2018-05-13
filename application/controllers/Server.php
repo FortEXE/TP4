@@ -28,12 +28,12 @@ class Server extends CI_Controller {
 
 	public function postMahasiswa(){
 		$data = array(
-			'nim' => $this->input->post('nim');
-			'nama' => $this->input->post('nama');
-			'kelas' => $this->input->post('kelas');
-			'email' => $this->input->post('email');
-			'password' => $this->input->post('password');
-		)
+			'nim' => $this->input->post('nim'),
+			'nama' => $this->input->post('nama'),
+			'kelas' => $this->input->post('kelas'),
+			'email' => $this->input->post('email'),
+			'password' => $this->input->post('password'),
+		);
 
 		$insert = $this->M_Mhs->insertMhs($data);
 
@@ -50,13 +50,13 @@ class Server extends CI_Controller {
 
 	public function putMahasiswa(){
 		$data = array(
-			'id' => $this->input->post('id');
-			'nim' => $this->input->post('nim');
-			'nama' => $this->input->post('nama');
-			'kelas' => $this->input->post('kelas');
-			'email' => $this->input->post('email');
-			'password' => $this->input->post('password');
-		)
+			'id' => $this->input->post('id'),
+			'nim' => $this->input->post('nim'),
+			'nama' => $this->input->post('nama'),
+			'kelas' => $this->input->post('kelas'),
+			'email' => $this->input->post('email'),
+			'password' => $this->input->post('password')
+		);
 
 		$update = $this->M_Mhs->updateMhs($data);
 
@@ -73,8 +73,8 @@ class Server extends CI_Controller {
 
 	public function deleteMahasiswa(){
 		$data = array(
-			'id' => $this->input->post('id');
-		)
+			'id' => $this->input->post('id')
+		);
 
 		$update = $this->M_Mhs->deleteMhs($data);
 

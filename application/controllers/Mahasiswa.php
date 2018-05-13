@@ -9,7 +9,7 @@ class Mahasiswa extends CI_Controller {
 	{
 		parent::__construct();
 
-		$this->API="http://localhost/TP4/index.php/Server";
+		$this->API="http://cs-upi-16.com/user/adnankhairi/index.php/server";
 		$this->load->library('curl');
 	}
 
@@ -42,8 +42,31 @@ class Mahasiswa extends CI_Controller {
 	public function tambah()
 	{
 		$meta['page_title'] = "tambah mahasiswa";
+		$data['API'] = $this->API;
 		$this->load->view('template/header', $meta);
-		$this->load->view('v_tambah');
+		$this->load->view('v_tambah', $data);
+		$this->load->view('template/footer');
+	}
+
+	public function edit($xid)
+	{
+		$meta['page_title'] = "edit mahasiswa";
+		$data['mahasiswas'] = json_decode($this->curl->simple_get($this->API . '/getByIdmahasiswas/'. $xid));
+		$data['API'] = $this->API;
+		$this->load->view('template/header', $meta);
+		$this->load->view('v_edit', $data);
+		$this->load->view('template/footer');
+	}
+
+	public function hapus($xid)
+	{
+		$meta['page_title'] = "hapus mahasiswa";
+		
+		$data['mahasiswas'] = json_decode($this->curl->simple_get($this->API . '/getByIdmahasiswas/'. $xid));
+		$data['API'] = $this->API;
+
+		$this->load->view('template/header', $meta);
+		$this->load->view('v_hapus', $data);
 		$this->load->view('template/footer');
 	}
 

@@ -1,4 +1,4 @@
-<form action="<?= site_url('Server/postMahasiswa') ?>" method="POST" role="form">
+<form action="<?= $API . '/postMahasiswa' ?>" method="POST" role="form">
   <!-- <legend>Tambah</legend> -->
 
   <div class="form-group">
@@ -22,4 +22,6 @@
     <input type="text" class="form-control col-sm-3" name="password" placeholder="Input password">
   </div>
   <button type="submit" name="submit" class="btn btn-success">Tambah</button>
+  <a href="javascript:history.back()" title="">back to main</a>
+
 </form>
